@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #f4f6f8;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.ViewReportsController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #0c5449;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Academic Portal - Performance Report" textFill="#bfa15f">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="25.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+
+        <VBox layoutX="75.0" layoutY="105.0" prefWidth="600.0" spacing="15.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 4); -fx-padding: 25px;" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="105.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefWidth="550.0">
+                    <children>
+                        <Label text="Sorted Student Rosters by Letter Tier" textFill="#0c5449">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
+                            <children>
+                                <Button fx:id="sortToggleButton" mnemonicParsing="false" onAction="#toggleSortOrder" style="-fx-background-color: transparent; -fx-text-fill: #0c5449; -fx-border-color: #0c5449; -fx-border-radius: 4px; -fx-cursor: hand;" text="Sort: Highest First">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+
+                <TableView fx:id="reportsTable" prefHeight="240.0" prefWidth="550.0" style="-fx-background-radius: 4px; -fx-border-radius: 4px; -fx-border-color: #e0e0e0;">
+                    <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="110.0" text="Student ID" />
+                        <TableColumn fx:id="nameColumn" prefWidth="250.0" text="Student Name" />
+                        <TableColumn fx:id="gradeColumn" prefWidth="90.0" text="Score" />
+                        <TableColumn fx:id="letterColumn" prefWidth="95.0" text="Letter Grade" />
+                    </columns>
+                </TableView>
+
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBackToDashboard" prefHeight="35.0" prefWidth="160.0" style="-fx-background-color: transparent; -fx-text-fill: #7f8c8d; -fx-border-color: #7f8c8d; -fx-border-radius: 4px; -fx-cursor: hand;" text="Back to Dashboard">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #f4f6f8;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.LoginController">
+    <children>
+        <VBox alignment="CENTER" layoutX="175.0" layoutY="120.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 4); -fx-padding: 30px;" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="120.0">
+            <children>
+                <Label alignment="CENTER" text="Academic Portal" textFill="#bfa15f">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                </Label>
+
+                <TextField fx:id="usernameField" maxWidth="260.0" prefWidth="260.0" promptText="Username">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </TextField>
+
+                <PasswordField fx:id="passwordField" maxWidth="260.0" prefWidth="260.0" promptText="Password">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+
+                <Button fx:id="loginButton" maxWidth="260.0" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="260.0" style="-fx-cursor: hand; -fx-background-color: #0c5449; -fx-text-fill: white; -fx-background-radius: 4px; -fx-cursor: hand;" text="Login">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Button>
+
+                <Label fx:id="errorLabel" alignment="CENTER" maxWidth="260.0" prefWidth="260.0" textAlignment="CENTER" textFill="RED" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+
+        <HBox alignment="CENTER" prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #0c5449;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="60.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Umm_Al-Qura_University_logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #f4f6f8;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.DashboardController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #0c5449;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                  <ImageView fitHeight="83.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Umm_Al-Qura_University_logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+                <Label alignment="TOP_CENTER" text="Academic Portal - Dashboard" textFill="#bfa15f">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="25.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+
+        <VBox layoutY="75.0" prefHeight="425.0" prefWidth="200.0" style="-fx-background-color: #0c5449; -fx-padding: 15px; -fx-spacing: 15px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0">
+            <children>
+                <Button fx:id="addStudentBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goToAddStudent" style="-fx-cursor: hand; -fx-background-color: transparent; -fx-text-fill: #bfa15f; -fx-border-color: #bfa15f; -fx-border-radius: 5px;" text="Add Student">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="addGradesBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goToAddGrades" style="-fx-cursor: hand; -fx-background-color: transparent; -fx-text-fill: #bfa15f; -fx-border-color: #bfa15f; -fx-border-radius: 5px;" text="Add Grades">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="viewStudentsBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goToViewStudents" style="-fx-cursor: hand; -fx-background-color: transparent; -fx-text-fill: #bfa15f; -fx-border-color: #bfa15f; -fx-border-radius: 5px;" text="View Students">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <Button fx:id="viewReportsBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#goToReports" style="-fx-cursor: hand; -fx-background-color: transparent; -fx-text-fill: #bfa15f; -fx-border-color: #bfa15f; -fx-border-radius: 5px;" text="Reports">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+                <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <Button fx:id="logoutBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogout" style="-fx-cursor: hand; -fx-background-color: #b22222; -fx-text-fill: white;" text="Logout">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+
+        <GridPane hgap="20.0" layoutX="230.0" layoutY="110.0" prefHeight="130.0" prefWidth="490.0" vgap="20.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="110.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2); -fx-padding: 20px;">
+                    <children>
+                        <Label text="Total Students" textFill="#7f8c8d">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="totalStudentsLabel" text="0" textFill="#0c5449">
+                            <font>
+                                <Font name="System Bold" size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+
+                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 2); -fx-padding: 20px;" GridPane.columnIndex="1">
+                    <children>
+                        <Label text="Average Grade" textFill="#7f8c8d">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="averageGradeLabel" text="0.0%" textFill="#0c5449">
+                            <font>
+                                <Font name="System Bold" size="36.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </GridPane>
+        <Label layoutX="235.0" layoutY="274.0" text="Welcome to the System Dashboard!" textFill="#2c3e50">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="235.0" layoutY="305.0" prefWidth="480.0" text="Use the sidebar navigation panel on the left to quickly manage records, register new students, assign grades, or generate administrative summaries." textFill="#7f8c8d" wrapText="true">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #f4f6f8;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AddGradesController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="200.0" style="-fx-background-color: #0c5449;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label text="Academic Portal - Assign Grades" textFill="#bfa15f">
+                    <font>
+                        <Font name="System Bold" size="22.0" />
+                    </font>
+                    <HBox.margin>
+                        <Insets left="25.0" />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+
+        <VBox layoutX="175.0" layoutY="120.0" prefWidth="400.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 15, 0, 0, 4); -fx-padding: 30px;" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="120.0">
+            <children>
+                <Label text="Grade Assignment Entry" textFill="#0c5449">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Student ID Verification" textFill="#7f8c8d">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="idField" prefHeight="38.0" promptText="Enter Student ID (e.g., 446xxxxx)" />
+                    </children>
+                </VBox>
+
+                <VBox spacing="5.0">
+                    <children>
+                        <Label text="Score (0 - 100)" textFill="#7f8c8d">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="gradeField" prefHeight="38.0" promptText="Enter Grade" />
+                    </children>
+                </VBox>
+
+                <Label fx:id="messageLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+
+                <HBox alignment="CENTER_RIGHT" spacing="15.0">
+                    <children>
+                        <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" prefHeight="38.0" prefWidth="100.0" style="-fx-cursor: hand; -fx-background-color: transparent; -fx-text-fill: #7f8c8d; -fx-border-color: #7f8c8d; -fx-border-radius: 4px;" text="Back">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveGrade" prefHeight="38.0" prefWidth="140.0" style="-fx-cursor: hand; -fx-background-color: #0c5449; -fx-text-fill: white; -fx-background-radius: 4px;" text="Save Grade">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
